@@ -1,0 +1,4 @@
+IP server: 52.53.185.235
+
+mysql cmd
+ssh -i e-takalo.pem admin@52.53.185.235
