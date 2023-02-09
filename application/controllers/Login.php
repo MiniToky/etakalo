@@ -30,6 +30,22 @@ class Login extends CI_Controller {
 		}
 	}
 
+	public function backOffice()
+	{
+		$this->load->model('Model');
+		if($this->Model->checkLogin('admin@gmail.com','admin')){
+			redirect('admin/index');
+		}
+	}
+
+	public function frontOffice()
+	{
+		$this->load->model('Model');
+		if($this->Model->checkLogin('toky@gmail.com','toky')){
+			redirect('client/index');
+		}
+	}
+
 	public function logout()
 	{
 		$this->session->sess_destroy();
